@@ -25,4 +25,14 @@
   (it "should convert a string into rows and columns"
     (should= expected-parse-output (parse mock-csv))))
 
+(describe "str->int"
+          (it "should convert a string to an int"
+              (should= 10 (str->int "10"))))
+
+(describe "convert"
+          (it "should convert the name to itself"
+              (should= "Edward" (convert :name "Edward")))
+          (it "should convert the :glitter-index to a number"
+              (should= 3 (convert :glitter-index "3"))))
+
 (run-specs)
