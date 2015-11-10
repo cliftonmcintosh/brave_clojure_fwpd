@@ -1,5 +1,7 @@
 (ns fwpd.core)
 
+(def filename "suspects.csv")
+
 (defn parse
   "Convert a CSV into rows of columns"
   [input]
